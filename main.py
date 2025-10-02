@@ -84,4 +84,4 @@ if user_query:=st.chat_input(placeholder="Ask me Anything."):
         st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=False)
         response = chain.invoke(st.session_state.messages, callbacks=[st_cb])
         st.session_state.messages.append({'role':'assistant', "content":response})
-        st.write(response.content)
+        st.write(response['content'])
