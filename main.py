@@ -61,7 +61,7 @@ for msg in st.session_state.messages:
 
 ### If prompt is added
 
-if user_query:=st.chat_input(placeholder="Your Query"):
+if user_query:=st.chat_input(placeholder="ASk me Anything."):
 
     ### Taking input from the user and printing it
     st.session_state.messages.append({"role":"user", "content":user_query})
